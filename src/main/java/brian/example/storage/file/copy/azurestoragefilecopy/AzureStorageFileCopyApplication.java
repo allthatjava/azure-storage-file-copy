@@ -13,7 +13,7 @@ public class AzureStorageFileCopyApplication {
 
     public static void main(String[] args) {
 
-        String connectionString = "DefaultEndpointsProtocol=https;AccountName=teststorageaccount123123;AccountKey=3fjj7aNCvbv62MLQoG1i96CRZLivjMbcyD5mN9G4wN6k9p4ub3/eekUQj35Uq03XFeGLx1uLbTVr+AStnagsaQ==;EndpointSuffix=core.windows.net";
+        String connectionString = "{your_storage_connection_string}}";
         BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectionString).buildClient();
         BlobContainerClient sourceContainerClient = blobServiceClient.getBlobContainerClient("firstcontainer");
         BlobClient sourceBlobClient = sourceContainerClient.getBlobClient("test.txt");
